@@ -34,7 +34,7 @@ function CemberinCevresi(yaricap){
 	let cevre = 2 * pi * yaricap;
 	return cevre;
 }
-console.log(CemberinCevresi(5));
+console.log("gorev1", CemberinCevresi(5));
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -54,7 +54,7 @@ function CemberinAlani(yaricap, piSayisi){
 let cemberAlani = piSayisi * yaricap * yaricap;
 return cemberAlani;
 }
-console.log(CemberinAlani(15,pi));
+console.log("gorev2",CemberinAlani(15,pi));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -91,7 +91,7 @@ console.log(CemberinAlani(15,pi));
 			enkucuk = sayilar[i];
 		}
 	}
-	
+	console.log("gorev3a"," en büyük sayı :" ,enbuyuk," en küçük sayı :",enkucuk );
 	
 	// 3b çözümü:
 
@@ -103,38 +103,95 @@ console.log(CemberinAlani(15,pi));
 			return ucetambolunenler.push(number)
 		} 
 	} );
-		console.log(ucetambolunenler);
+		console.log("gorev3b",ucetambolunenler);
 		
 	//3c çözümü:
 	
 	/* kodlar buraya */
 
-	ucebolunenlerintoplami = ucetambolunenler.reduce((a,b) => (a + b),0)
-	console.log(ucebolunenlerintoplami);
+	ucebolunenlerintoplami = ucetambolunenler.reduce((firstnum,finalnum) => (firstnum + finalnum),0)
+	console.log("gorev3c",ucebolunenlerintoplami);
 	//3d çözümü
 	
 	/* kodlar buraya */
-	besyuzdenkucuksayilar =[];
-	 let sonuc = sayilar.filter((number) => {if( number < 500){
-		besyuzdenkucuksayilar.push(number);}
-	 } )
+	
+	besyuzdenkucuksayilar = sayilar.filter((number) => number < 500);
+	console.log("gorev3d" , besyuzdenkucuksayilar);	
+
 		
 	//3e çözümü
 
 	/* kodlar buraya */
 	
 	siralisayilar = besyuzdenkucuksayilar.sort(function(a, b){return a - b});
-	console.log(siralisayilar);
+	console.log("gorev3e" ,siralisayilar);
 
 	//3f çözümü
 	
 	/* kodlar buraya */
 
+// 	var sayilarinTekrarSayisi = {};
+//     for (var i = 0; i < sayilar.length; i++) {
+//      if (sayilarinTekrarSayisi[sayilar[i]] === undefined) {
+//     sayilarinTekrarSayisi[sayilar[i]] = 1;
+//       } else {
+//     sayilarinTekrarSayisi[sayilar[i]]++;
+//      }
+//     }
 
+// var tekraredensayilar = [];
+// for (var sayi in sayilarinTekrarSayisi) {
+//   if (sayilarinTekrarSayisi[sayi] > 1) {
+//     tekraredensayilar.push(sayi + " sayısı " + sayilarinTekrarSayisi[sayi] + " kere tekrar edilmiştir");
+//   }
+// }
 
-
+//--------------------
+// tekraredensayilar =[];
+// 	for (let i = 0; i < sayilar.length; i++) {
+// 		let counter = 1;
+// 		let findNumber = sayilar[i];
+// 		for (let k = i + 1 ; k < sayilar.length; k++) {
+// 			if (sayilar[k] === findNumber) {
+// 				counter++;
+// 		}
+// 	}
+// 		if (counter > 1) {
+// 			tekraredensayilar.push(`${findNumber} sayısı ${counter} kere tekrar edilmiştir`);
+// 		}
+// }
 	
-		
+// tekraredensayilar =[];
+// for(let i = 0; i <sayilar.length;i++) {
+// 	if(sayilar[i] = 
+// }
+// tekraredensayilar =  [];
+// for(let i = 0; i <sayilar.length; i++){
+// 	let sayac = 0;
+// 	for(let j=0; j <sayilar.length; j++) {
+// 		if(sayilar[i] === sayilar[j]){
+// 			sayac =sayac+1;
+// 		}
+// 		if(sayac>1){
+// 			tekraredensayilar.push(${sayilar[i]} sayısı ${sayac} kere tekrar edilmiştir);
+// 		}
+// 	}
+	
+// }
+	
+tekraredensayilar =  [];
+for(let i = 0;i<sayilar.length;i++){
+	let sayac = 0;
+	for(let j = 0;j<sayilar.length;j++){
+		if(sayilar[i] === sayilar[j]){
+			sayac++
+			if(sayac>1){
+		tekraredensayilar.push(`${sayilar[i]} sayısı ${sayac} kere tekrar edilmiştir`);
+		}
+		}
+	}
+}
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa(){
