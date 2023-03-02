@@ -82,14 +82,28 @@ console.log(CemberinAlani(15,pi));
 	//3a çözümü
 
 	/* kodlar buraya */
-	
+	enbuyuk = sayilar[0];
+	enkucuk = sayilar[1];
+	for(let i = 0; i <sayilar.length; i++) {
+		if(sayilar[i] > enbuyuk){
+			enbuyuk = sayilar[i];
+		} else if(sayilar[i] < enkucuk){
+			enkucuk = sayilar[i];
+		}
+	}
 	
 	
 	// 3b çözümü:
 
 	/* kodlar buraya */
 		
-		
+	ucetambolunenler = [];
+	let degerler = sayilar.forEach(number => { 
+		if(number % 3 === 0){
+			return ucetambolunenler.push(number)
+		} 
+	} );
+		console.log(ucetambolunenler);
 		
 	//3c çözümü:
 	
