@@ -29,10 +29,12 @@ function KareninAlani(kenaruzunlugu){
 			4. Hesaplanan çemberin çevresi döndürülecektir.
 		*/
 
-function CemberinCevresi(/* kodlar buraya */){
+function CemberinCevresi(yaricap){
 	/* kodlar buraya */
+	let cevre = 2 * pi * yaricap;
+	return cevre;
 }
-
+console.log(CemberinCevresi(5));
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -47,10 +49,12 @@ function CemberinCevresi(/* kodlar buraya */){
 			4. Hesaplanan çemberin alanı döndürülecektir.
 		*/
 		
-function CemberinAlani(/* kodlar buraya */){
+function CemberinAlani(yaricap, piSayisi){
 	/* kodlar buraya */
+let cemberAlani = piSayisi * yaricap * yaricap;
+return cemberAlani;
 }
-
+console.log(CemberinAlani(15,pi));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
