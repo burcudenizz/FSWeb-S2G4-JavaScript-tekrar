@@ -109,19 +109,23 @@ console.log(CemberinAlani(15,pi));
 	
 	/* kodlar buraya */
 
-	
-	
+	ucebolunenlerintoplami = ucetambolunenler.reduce((a,b) => (a + b),0)
+	console.log(ucebolunenlerintoplami);
 	//3d çözümü
 	
 	/* kodlar buraya */
-
-
-
+	besyuzdenkucuksayilar =[];
+	 let sonuc = sayilar.filter((number) => {if( number < 500){
+		besyuzdenkucuksayilar.push(number);}
+	 } )
+		
 	//3e çözümü
 
 	/* kodlar buraya */
 	
-	
+	siralisayilar = besyuzdenkucuksayilar.sort(function(a, b){return a - b});
+	console.log(siralisayilar);
+
 	//3f çözümü
 	
 	/* kodlar buraya */
